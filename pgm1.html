@@ -1,8 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>hello,world</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nice{
+            width: 500px;
+            height: 300px;
+            border: 10px solid purple;
+        }
+        .con{
+        display:flex;
+        justify-content: center;
+    }
+    .butn{
+        text-align: right;
+        background-color:blue;
+        color:black;
+        width:70px;
+        text-align: center;
+    }
+    .head{
+       color:deeppink;
+       font: size 20px;
+       font-style: italic;
+       text-align: center;
+    }
+    </style>
+</head>
 <body>
-<p>hello,world</p>
+    <h1 style="color:darkred;font-size: 50px;font-style:normal;text-align: center;">CALCULATOR</h1>
+    <div class="con">
+    <div class="nice">
+        <h1 class="head">SUM CALCULATOR</h1>
+        <input type="text" name="firstnum" id="FN1" placeholder=" ENTER FIRST Number">
+        <br/>
+        <input type="text" name="snum" id="SN1" placeholder="ENTER second Number">
+        <br/>
+        <br/>
+        <input type="button" class="butn" value="SUM" onclick="SUM()">
+    <p id="disp1"></p>
+    </div>
+    <script>
+        function SUM(){
+            let A=parseInt(document.getElementById('FN1').value);
+            let B=parseInt(document.getElementById('SN1').value);
+            let D=A+B;
+            document.getElementById('disp1').innerHTML=D;
+        }
+        </script>
+        <div class="nice">
+            <h1 class="head">SUBSTRACTION CALCULATOR</h1>
+        <input type="text" name="firstnum" id="FN2" placeholder=" ENTER FIRST Number">
+        <br/>
+        <input type="text" name="snum" id="SN2" placeholder="ENTER second  Number">
+        <br/>
+        <br/>
+        <input type="button" class="butn" value="SUB" onclick="SUB()">
+        <p id="disp2"></p>
+    </div>
+    <script>
+        function SUB(){
+            let X=parseInt(document.getElementById('FN2').value);
+            let Y=parseInt(document.getElementById('SN2').value);
+            let Z=X-Y;
+            document.getElementById('disp2').innerHTML=Z;
+        }
+    </script>
+    </div>
+    <div class="con">
+        <div class="nice">
+            <h1 class="head">MULTIPLICATION CALCULATOR</h1>
+                <input type="text" name="firstnum" id="FN3" placeholder=" ENTER FIRST Number">
+                <br/>
+                <input type="text" name="snum" id="SN3" placeholder="ENTER second Number">
+                <br/>
+                <br/>
+                <input type="button" class="butn" value="MUL" onclick="MUL()">
+            <p id="disp3"></p>
+            </div>
+            <script>
+                function MUL(){
+            let P=parseInt(document.getElementById('FN3').value);
+            let Q=parseInt(document.getElementById('SN3').value);
+            let R=P*Q;
+            document.getElementById('disp3').innerHTML=R;
+        }
+            </script>
+            <div class="nice">
+                <h1 class="head">DIVISION CALCULATOR</h1>
+                <input type="text" name="firstnum" id="FN4" placeholder=" ENTER FIRST Number">
+                <br/>
+                <input type="text" name="snum" id="SN4" placeholder="ENTER second Number">
+                <br/>
+                <br/>
+                <input type="button" class="butn" value="DIV" onclick="DIV()">
+            <p id="disp4"></p>
+            </div>
+            <script>
+            function DIV(){
+                let S=parseInt(document.getElementById('FN4').value);
+                let T=parseInt(document.getElementById('SN4').value);
+                let U=S/T;
+                document.getElementById('disp4').innerHTML=U;
+            }
+        </script>
+        </div>
 </body>
 </html>
